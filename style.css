@@ -1,0 +1,790 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+html, body, #container, #carregamento, #carregado{
+    height: 100%;
+
+    scroll-behavior: smooth;
+}
+body{
+    /* width: 98vw; */
+    /* padding: 1%; */
+
+    background-color: #111111;
+    
+    /* ffff3e amarelo */
+    /* ff8c00 laranja */
+    /* eb1515 vermelho */
+    /* 0d730d verde */
+    /* 111111 preto */
+    /* 292929 preto */
+}
+
+#container, #carregamento, #carregamento_interno, #porcentagem, #icone_pizza, #grupo_porcentagem, #grupo_icone_pizza{
+    /* border: 1px solid red; */
+}
+
+#carregamento{
+    width: 100%;
+
+    
+    display: none;
+
+    display: flex;
+        justify-content: center;
+
+    
+    background-color: #292929;
+}
+#carregamento_interno{
+    margin-top: 15%;
+}
+#porcentagem{
+    font-size: 8em;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+#grupo_icone_pizza{
+    margin-top: 10%;
+
+    position: relative;
+
+    display: flex;
+        justify-content: center;
+}
+#grupo_icone_pizza img, #logo img{
+    width: 10em;
+
+    padding: 5px;
+}
+#sombra_icone_pizza{
+    width: 100%;
+    height: 10em;
+
+    position: absolute;
+        top: 0;
+        left: 0;
+
+    background-color: rgba(41, 41, 41);
+}
+
+/* ----------------------------------------------------------- */
+/* ---------------------###########--------------------------- */
+/* ----------------------------------------------------------- */
+
+#carregado{
+    width: 100vw;
+
+    /* background-image: linear-gradient(to top, rgb(250, 155, 39), rgba(235, 21, 21, 1)); */
+}
+
+/* --------------------------HEADER F--------------------------------- */
+
+header{
+    width: 100%;
+
+    display: inline-block;
+
+    position: relative;
+
+    font-size: 1.5em;
+    overflow: visible;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 10;
+}
+#logo{
+    display: flex;
+        justify-content: center;
+}
+
+/* ----------------------------icone menu I------------------------------- */
+#menu_icon{
+    display: none;
+
+    cursor: pointer;
+}
+#bar2{
+    margin: 6px 0px;
+}
+#bar1, #bar2, #bar3{
+    width: 35px;
+    height: 5px;
+
+    transition: 0.4s;
+
+    background-color: #E4D9C0;
+}
+.change #bar1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.change #bar2{
+    opacity: 0;
+}
+.change #bar3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/* ----------------------------icone menu F------------------------------- */
+
+nav{
+    padding: 0 3vw;
+}
+nav ul{
+    display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    text-shadow: 0px 0px 10px #000;
+}
+nav ul li{
+    display: inline;
+
+    margin: 5px 10px;
+}
+nav ul li a{
+    color: #E4D9C0;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover, nav ul li a:active{
+    text-decoration: overline underline;
+    text-decoration-color: #A3283A;
+}
+
+/* --------------------------HEADER F--------------------------------- */
+
+/* --------------------------CONTEUDO I--------------------------------- */
+
+/* --------------------------CARDAPIO I */
+#slide_cardapio, .tipo_pizza, .slideshow a, ul, li{
+    /* border: 1px solid red; */
+}
+#conteudo{
+    margin-top: 7%;
+}
+#slide_cardapio{
+    position: relative;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #e4d9c0;
+}
+.slideshow_info_pizza{
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    position: absolute;
+        top: 0;
+        left: 0;
+
+    background: rgba(17, 17, 17, 0.9);
+    border-top: 1px solid #A3283A;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 1;
+}
+.slideshow_info_pizza .fechar{
+    padding-right: 2%;
+    
+    position: absolute;
+        top: 0;
+        right: 0;
+
+    font-size: 2.5em;
+    cursor: pointer;
+}
+.slideshow_info_pizza .fechar:hover{
+    color: #a3283a;
+}
+.slideshow_info_pizza .grupo_informacoes{
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 1.5em;
+
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+.slideshow_info_pizza .grupo_amostra{
+    text-align: center;
+}
+.slideshow_info_pizza .grupo_amostra img{
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.slideshow_info_pizza .grupo_descricao{
+    width: 48%;
+
+    padding: 1%;
+
+    float: right;
+}
+.slideshow_info_pizza .grupo_descricao h1{
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
+}
+.slideshow_info_pizza .grupo_descricao ul{
+    display: none;
+
+    padding: 5px;
+}
+.slideshow_info_pizza .grupo_descricao li{
+    width: 48%;
+
+    display: inline-block;
+
+    font-size: 1.5em;
+    border-bottom: 1px solid #A3283A;
+}
+.slideshow_info_pizza .grupo_descricao p{
+    font-size: 1.7em;
+    text-align: right;
+    font-weight: bold;
+}
+
+.slideshow{
+    margin-top: 1em;
+    padding: 3%;
+
+    position: relative;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    color: #fff;
+    font-size: 1.5em;
+}
+.box_passadores{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.box_passadores .passadores{
+    width: 50%;
+}
+.slideshow .esquerdo,
+.slideshow .direito{
+    width: 50px;
+    height: 5em;
+
+    padding-top: 1.8em;
+
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px solid #A3283A;
+    color: #A3283A;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.slideshow .esquerdo:hover,
+.slideshow .direito:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.slideshow .esquerdo{
+
+    float: left;
+}
+.slideshow .direito{
+    float: right;
+}
+
+.elementos_slideshow{
+    display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+}
+.slideshow_atual{
+    display: flex !important;
+}
+.elementos_slideshow li{
+    width: 320px;
+    height: 85px;
+
+    margin: 1%;
+    margin-bottom: 1em;
+
+    display: inline-block;
+    
+    background-size: cover;
+
+    background-image: linear-gradient(to bottom, #111111, rgba(0,0,0, 0));
+    border-top: 1px solid #A3283A;
+    cursor: pointer;
+}
+.elementos_slideshow li:hover{
+    border-top: 1px solid #fff;
+}
+.elementos_slideshow li p{
+    background-image: linear-gradient(to right, #111111, #111111, rgba(0,0,0, 0.3));
+    color: #fff;
+    font-size: 1.0em;
+}
+.tipo_pizza{
+    width: 100vw;
+
+    margin: 0 auto;
+    padding: 0 10%;
+
+    display: flex;
+        justify-content: center;
+}
+.tipo_pizza a{
+    padding-bottom: 4px; /* não empurra conteudo para baixo ao passar o mouse */
+
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.tipo_pizza a:hover, .tipo_pizza a:active{
+    padding-bottom: 0px; /* não empurra conteudo para baixo ao passar o mouse */
+
+    border-top: 3px solid #A3283A !important;
+}
+/* --------------------------CARDAPIO F */
+/* --------------------------RODIZIO I */
+#sections, section, .rodizio_items *{
+    /* border: 1px solid red; */
+}
+#rodizio{
+    margin-top: 3em;
+
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #E4D9C0;
+    border-top: 1px solid #A3283A;
+}
+#rodizio > h1, #galeria > h1{
+    padding: 20px;
+
+    font-size: 2em;
+    text-align: left;
+}
+.rodizio_items{
+    width: 90%;
+
+    margin: 0 auto;
+
+    display: flex;
+        justify-content: space-around;
+        
+    overflow: hidden;
+}
+.rodizio_items > div{
+    display: inline-block;
+
+    padding: 0.5em;
+}
+.rodizio_items > div:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+
+    cursor: pointer;
+}
+@keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.rodizio_items > div img{
+    width: 135px;
+}
+/* --------------------------RODIZIO F */
+/* --------------------------PROMOÇÃO I */
+#promocao *{
+    /* border: 1px solid red; */
+}
+#promocao{
+    padding: 7px;
+
+    position: absolute;
+        top: 5%;
+        left: 1%;
+    
+    z-index: 11;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    cursor: pointer;
+}
+#promocao .promocao_items > div{
+    display: none;
+}
+.titulo_promocao{
+    font-size: 25px;
+}
+#promocao:hover{
+    background-color: #701321;
+    border-radius: 16px;
+}
+#promocao:hover .titulo_promocao{
+    padding: 7px;
+
+    display: block !important;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #701321;
+    background-color: #fff;
+}
+#promocao .promocao_items > img{
+    width: 100px;
+    height: 100px;
+}
+#promocao .promocao_items > img:last-child{
+    display: none;
+}
+/* --------------------------PROMOÇÃO F */
+
+/* --------------------------GALERIA I */
+#galeria *{
+    /* border: 1px solid red; */
+}
+#galeria{
+    margin-top: 6em;
+
+    border-top: 1px solid #A3283A;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #E4D9C0;
+}
+#galeria .galeria_row{
+    width: 90vw;
+
+    margin: 0 auto;
+    padding: 0em 0.3em;
+
+    display: flex;
+        flex-wrap: wrap;
+}
+#galeria .galeria_column{
+    padding: 0 2px;
+
+    flex: 20%;
+}
+#galeria .galeria_column img{
+    width: 100%;
+
+    padding: 2%;
+    margin-top: 4px;
+
+    vertical-align: middle;
+        
+    background-color: #E4D9C0;
+}
+/* --------------------------GALERIA F */
+
+/* --------------------------SOBRE I */
+#sobre *{
+    /* border: 1px solid red; */
+}
+#sobre{
+    margin-top: 3em;
+    padding: 0 2em;
+
+    background: url(./imagens/sobre/fundo.png) #A3283A;
+    font-family: 'Caveat', cursive;
+    color: #FFFFFF;
+    font-size: 2em;
+}
+#sobre > div{
+    padding: 2em 0;
+}
+#sobre p{
+    text-indent: 25px;
+}
+/* --------------------------SOBRE F */
+
+/* --------------------------CONTATO I */
+#contato *{
+    /* border: 1px solid red; */
+}
+#contato{
+    margin-top: 3em;
+
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    color: #E4D9C0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#contato .p_wt{
+    width: 100%;
+
+    font-size: 2em;
+}
+#contato .p_wt p{
+    width: 100%;
+
+    display: inline-block;
+
+    text-align: center;
+}
+#contato a{
+    color: #E4D9C0;
+}
+#contato .p_wt a{
+    margin-left: 0.3em;
+
+    display: inline;
+
+    font-size: 2em;
+    vertical-align: middle;
+    text-align: center;
+}
+#contato .social{
+    display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+}
+#contato .social > a{
+
+    display: inline-block;
+    
+    font-size: 4em;
+}
+#contato .endereco{
+    background-color: #A3283A;
+}
+#contato .endereco address{
+    padding: 15px;
+}
+
+/* --------------------------CONTATO F */
+/* --------------------------CONTEUDO F--------------------------------- */
+
+@media only screen and (max-width: 1024px){
+    .rodizio_items{
+        flex-wrap: wrap;
+    }
+    .rodizio_items > div{
+        width: 29%;
+    }
+    .rodizio_items > div img{
+        width: 7em;
+    }
+    .rodizio_items > div h1{
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 768px){
+    header, nav, #logo, #logo img, nav li, nav a, #menu_icon{
+        /* border: 1px solid red; */
+    }
+    #menu_icon{
+        margin: 3%;
+
+        display: block;
+
+        position: absolute;
+            right: 0;
+
+        overflow: hidden;
+    }
+    #logo{
+        width: 100vw;
+        
+        float: left;
+
+        transition: 1s;
+    }
+    .change_logo{
+        width: 30vw !important;
+    }
+    nav{
+        width: 55vw;
+
+        margin-right: calc(3% + 35px);
+
+        display: none;
+
+        position: absolute;
+            right: 0;
+
+        background-color: #111111;
+        float: right;
+        text-align: center;
+    }
+    nav li:first-child{
+        margin-top: 20px;
+    }
+    nav li{
+        width: 100%;
+    }
+    nav ul li a{
+        width: 100%;
+
+        display: block;
+    }
+
+    /* --------------------------CONTEUDO I--------------------------------- */
+    .tipo_pizza{
+        padding: 0;
+    }
+    .slideshow .esquerdo,
+    .slideshow .direito {
+        width: calc(2em + 30px);
+    }
+    
+    .slideshow_info_pizza *{
+        /* border: 1px solid red; */
+    }
+    .slideshow_info_pizza .grupo_informacoes{
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    .slideshow_info_pizza .grupo_descricao,
+    .slideshow_info_pizza .grupo_amostra{
+        width: 100%;
+    }
+    .slideshow_info_pizza .grupo_amostra img{
+        width: 360px;
+        height: 200px;
+        
+        margin: 3%;
+    }
+
+    #promocao *{
+        /* border: 1px solid red; */
+    }
+    #promocao{
+        width: 100vw;
+        height: 40px;
+
+        padding: 0;
+
+        position: static;
+
+        top: 0;
+        left: 0;
+
+        background-image: linear-gradient(to right, #ffff3e, #eb1515);
+    }
+    #promocao .promocao_items > img{
+        width: 40px;
+        height: 40px;
+    }
+    #promocao .promocao_items > img:last-child{
+        display: block;
+
+        transform: rotateY(180deg);
+    }
+    #promocao .promocao_items{
+        display: flex;
+            justify-content: space-around;
+    }
+    #promocao .promocao_items .titulo_promocao{
+        display: block;
+
+        font-size: 1.2em;
+        text-align: center;
+        border-radius: 15px;
+    }
+    #promocao .promocao_items .titulo_promocao p{
+        line-height: 40px
+    }
+    #promocao:hover .titulo_promocao{
+        padding: 0;
+    
+        background-color: transparent;
+        border-radius: 0;
+        font-size: 1.2em;
+        color: #111111;
+    }
+
+    #galeria .galeria_column:nth-child(3), #galeria .galeria_column:nth-child(4){
+        display: none;
+    }
+    #galeria .galeria_column img{
+        display: block !important;
+    }
+
+    #contato{
+        flex-direction: column;
+    }
+    #contato iframe{
+        width: 90vw;
+    }
+    /* --------------------------CONTEUDO F--------------------------------- */
+}
+@media only screen and (max-width: 425px){
+    #logo img{
+        width: 7em;
+    }
+    #slide_cardapio .tipo_pizza{
+        font-size: 1.1em;
+    }
+
+    .slideshow{
+        padding: 0;
+    }
+    .elementos_slideshow li p{
+        font-size: 1em;
+    }
+    .slideshow .esquerdo,
+    .slideshow .direito {
+        width: 3em;
+        
+        margin: 4%;
+    }
+    
+    .slideshow_info_pizza .grupo_amostra img{
+        width: 240px;
+        height: auto;
+        
+        margin: 3%;
+    }
+    .slideshow_info_pizza .grupo_descricao li{
+        font-size: 1.4em;
+    }
+    
+    .rodizio_items{
+        width: 100%;
+    }
+    .rodizio_items > div{
+        padding: 0;
+    }
+    .rodizio_items > div img{
+        width: 100%;
+    }
+
+    #sobre{
+        padding: 0.6em;
+        font-size: 1.5em;
+        text-align: justify;
+    }
+    #contato iframe{
+        width: 100vw;
+    }
+}
+@media only screen and (max-width: 320px){
+    #slide_cardapio .tipo_pizza{
+        font-size: 1em;
+    }
+    .elementos_slideshow li p{
+        font-size: 0.8em;
+    }
+    .slideshow .esquerdo,
+    .slideshow .direito {
+        width: 5em;
+    }
+}

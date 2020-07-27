@@ -1,0 +1,27 @@
+http://www.pizzacesar.com.br/
+https://primopiato.com.br/
+
+
+## somente entrega ##
+	https://www.pizzahut.com.br/
+
+
+
+
+conteúdo para site:
+	- sobre
+	- rodízio
+	- promoções
+	- reservas
+	- contato
+	- menu
+	- pedir online
+	- galeria
+	- faq
+	- endereço
+
+cores recomendadas:
+	- amarelo
+	- laranja
+	- vermelho
+	- preto

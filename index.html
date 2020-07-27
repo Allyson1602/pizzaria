@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Pizzaria</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e254a39363.js" crossorigin="anonymous"></script>
+
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="design/logo_pizza.png" rel="shortcut icon" type="image/png" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="carregamento">
+                <div id="carregamento_interno">
+                    <div id="grupo_porcentagem">
+                        <span id="porcentagem"></span>
+                    </div>
+                    <div id="grupo_icone_pizza">
+                        <img src="design/pizza3.png" id="icone_pizza" />
+                        <span id="sombra_icone_pizza"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="carregado">
+                <div id="promocao">
+                    <div class="promocao_items">
+                        <img src="imagens/promocao/pizza.png" />
+                        <div class="titulo_promocao">
+                            <p>Promoção do dia!</p>
+                        </div>
+                        <img src="imagens/promocao/pizza.png" />
+                    </div>
+                </div>
+                <header>
+                    <div id="menu_icon" onclick="animacaoMenu(this)">
+                        <div id="bar1"></div>
+                        <div id="bar2"></div>
+                        <div id="bar3"></div>
+                    </div>
+                    <div id="logo">
+                        <img src="design/logo_pizza.png" />
+                    </div>
+                    <nav id="navbar">
+                        <ul>
+                            <li><a href="#cardapio">Cardápio</a></li>
+                            <li><a href="#rodizio">Rodízio</a></li>
+                            <li><a href="#galeria">Galeria</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div id="conteudo">
+                    <div id="sections">
+                        <section id="cardapio">
+                            <div id="slide_cardapio">
+                                <div class="slideshow_info_pizza">
+                                    <div class="grupo_informacoes">
+                                        <div class="grupo_descricao">
+                                            <h1>Nome pizza</h1>
+                                            <ul class="tradicional">
+                                                <li>molho de tomate</li>
+                                                <li>tomate</li>
+                                                <li>presunto</li>
+                                                <li>mussarela</li>
+                                                <li>bacon</li>
+                                            </ul>
+                                            <ul class="americana">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>bacon</li>
+                                                <li>calabresa</li>
+                                                <li>ovo</li>
+                                                <li>cebola</li>
+                                            </ul>
+                                            <ul class="apresuntada">
+                                                <li>molho de tomate</li>
+                                                <li>presunto</li>
+                                                <li>mussarela</li>
+                                            </ul>
+                                            <ul class="crocante">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>catupiry</li>
+                                                <li>batata palha</li>
+                                            </ul>
+                                            <ul class="milho">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>milho</li>
+                                            </ul>
+                                            <ul class="mussarela">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                            </ul>
+
+                                            <ul class="calabresa">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>calabresa</li>
+                                            </ul>
+                                            <ul class="escarola">
+                                                <li>molho de tomate</li>
+                                                <li>escarola</li>
+                                                <li>bacon</li>
+                                                <li>alho</li>
+                                                <li>mussarela</li>
+                                            </ul>
+                                            <ul class="frango">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>frango desfiado</li>
+                                                <li>frango refogado</li>
+                                            </ul>
+                                            <ul class="frango com catupiry">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>frango desfiado</li>
+                                                <li>catupiry</li>
+                                            </ul>
+                                            <ul class="alho e óleo">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>alho</li>
+                                                <li>azeite de oliva</li>
+                                            </ul>
+                                            <ul class="bacon">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>bacon</li>
+                                            </ul>
+
+                                            <ul class="aliche">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>aliche</li>
+                                                <li>tomate</li>
+                                            </ul>
+                                            <ul class="amarelinha">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>palmito</li>
+                                                <li>ovo</li>
+                                                <li>cheddar</li>
+                                            </ul>
+                                            <ul class="atum">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>atum</li>
+                                                <li>cebola</li>
+                                                <li>azeitona</li>
+                                            </ul>
+                                            <ul class="campestre">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>bacon</li>
+                                                <li>milho</li>
+                                                <li>tomate</li>
+                                                <li>ovo</li>
+                                            </ul>
+                                            <ul class="capri">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>milho</li>
+                                                <li>tomate</li>
+                                                <li>milho</li>
+                                                <li>parmesão</li>
+                                            </ul>
+                                            <ul class="carioca">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>palmito</li>
+                                                <li>milho</li>
+                                                <li>catupiry</li>
+                                            </ul>
+                                            
+                                            <ul class="moda">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>presunto</li>
+                                                <li>milho</li>
+                                                <li>ervilha</li>
+                                                <li>calabresa</li>
+                                                <li>tomate</li>
+                                                <li>ovo</li>
+                                                <li>azeitona</li>
+                                            </ul>
+                                            <ul class="bacon_crocante">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>bacon</li>
+                                                <li>batata palha</li>
+                                            </ul>
+                                            <ul class="bolonhesa">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>bolonhesa</li>
+                                                <li>milho</li>
+                                                <li>molho parmegiana</li>
+                                                <li>parmesão</li>
+                                            </ul>
+                                            <ul class="brocolis">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>bacon</li>
+                                                <li>brócolis</li>
+                                                <li>champignon</li>
+                                                <li>alho</li>
+                                                <li>catupiry</li>
+                                            </ul>
+                                            <ul class="frango_catupiry">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>frango desfiado</li>
+                                                <li>frango refogado</li>
+                                                <li>catupiry</li>
+                                            </ul>
+                                            <ul class="havaiana">
+                                                <li>molho de tomate</li>
+                                                <li>mussarela</li>
+                                                <li>lombo</li>
+                                                <li>abacaxi</li>
+                                            </ul>
+                                            <p>R$ 30,00</p>
+                                        </div>
+                                        <div class="grupo_amostra">
+                                            <img src="imagens/pizzas/tradicional.jpg" width="370px" height="220px" class="amostra" />
+                                        </div>
+                                    </div>
+                                    <span class="fechar">x</span>
+                                </div>
+
+                                <div class="tipo_pizza">
+                                    <a class="tipo_pizza" id="normal" style="border-bottom: 2px solid #fff;">Normal</a>
+                                    <a class="tipo_pizza" id="especial" style="border-bottom: 2px solid #ffff3e;">Especial</a>
+                                    <a class="tipo_pizza" id="suprema" style="border-bottom: 2px solid #ff8c00;">Suprema</a>
+                                    <a class="tipo_pizza" id="cosmica" style="border-bottom: 2px solid #eb1515;">Cosmica</a>
+                                </div>
+
+                                <div class="slideshow">
+                                    <a class="esquerdo" onclick="maisSlides(-1)">&#10094</a>
+                    
+                                    <ul class="elementos_slideshow" id="normal">
+                                        <li style="background-image: url('imagens/pizzas/tradicional.jpg')" class="meusSlides" id="tradicional"><p>Tradicional</p></li>
+                                        <li style="background-image: url('imagens/pizzas/americana.jpg')" class="meusSlides" id="americana"><p>Americana</p></li>
+                                        <li style="background-image: url('imagens/pizzas/apresuntada.jpg')" class="meusSlides" id="apresuntada"><p>Apresuntada</p></li>
+                                        <li style="background-image: url('imagens/pizzas/crocante.jpg')" class="meusSlides" id="crocante"><p>Crocante</p></li>
+                                        <li style="background-image: url('imagens/pizzas/milho.jpg')" class="meusSlides" id="milho"><p>Milho</p></li>
+                                        <li style="background-image: url('imagens/pizzas/mussarela.jpg')" class="meusSlides" id="mussarela"><p>Mussarela</p></li>
+                                    </ul>
+                                    <ul class="elementos_slideshow" id="especial">
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/alho_oleo.jpg')" id="alho_oleo"><p>Alho e Óleo</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/bacon.jpg')" id="bacon"><p>Bacon</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/calabresa.jpg')" id="calabresa"><p>Calabresa</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/escarola.jpg')" id="escarola"><p>Escarola</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/frango.jpg')" id="frango"><p>Frango</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/frango_catupiry.jpg')" id="frango_catupiry"><p>Frango c/ Catupiry</p></li>
+                                    </ul>
+                                    <ul class="elementos_slideshow" id="suprema">
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/aliche.jpg')" id="aliche"><p>Aliche</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/amarelinha.jpg')" id="amarelinha"><p>Amarelinha</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/atum.jpg')" id="atum"><p>Atum</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/campestre.jpg')" id="campestre"><p>Campestre</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/capri.jpg')" id="capri"><p>Capri</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/carioca.jpg')" id="carioca"><p>Carioca</p></li>
+                                    </ul>
+                                    <ul class="elementos_slideshow" id="cosmica">
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/moda.jpg')" id="moda"><p>A moda</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/bacon_crocante.jpg')" id="bacon_crocante"><p>Bacon crocante</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/bolonhesa.jpg')" id="bolonhesa"><p>Bolonhesa</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/brocolis.jpg')" id="brocolis"><p>Brócolis</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/frango_cheddar.jpg')" id="frango_cheddar"><p>Frango c/ Cheddar</p></li>
+                                        <li class="meusSlides" style="background-image: url('imagens/pizzas/havaiana.jpg')" id="havaiana"><p>Havaiana</p></li>
+                                    </ul>
+                                    
+                    
+                                    <a class="direito" onclick="maisSlides(1)">&#10095</a>
+                                    
+                                    <!-- <div class="passador_geral"></div> -->
+                                </div>
+                            </div>
+                        </section>
+                        <section id="rodizio">
+                            <h1>Rodízio de:</h1>
+                            <div class="rodizio_items">
+                                <div>
+                                    <img src="imagens/rodizio/cach.png" />
+                                    <h1>Cachorro quente</h1>
+                                </div>
+                                <div>
+                                    <img src="imagens/rodizio/hamb.png" />
+                                    <h1>Hambur<wbr>guer</h1>
+                                </div>
+                                <div>
+                                    <img src="imagens/rodizio/pizza.png" />
+                                    <h1>Pizza</h1>
+                                </div>
+                                <div>
+                                    <img src="imagens/rodizio/refri.png" />
+                                    <h1>Refri</h1>
+                                </div>
+                                <div>
+                                    <img src="imagens/rodizio/rosq.png" />
+                                    <h1>Rosquinha</h1>
+                                </div>
+                                <div>
+                                    <img src="imagens/rodizio/sorv.png" />
+                                    <h1>Sorvete</h1>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="galeria">
+                            <h1>Nossos espaços:</h1>
+                            <div class="galeria_row">
+                                <div class="galeria_column">
+                                    <img src="imagens/galeria/salao2.jpg" />
+                                    <img src="imagens/galeria/salao3.jpg" />
+                                    
+                                    <img src="imagens/galeria/salao5.jpg" style="display: none;" />
+                                    <img src="imagens/galeria/salao9.jpg" style="display: none;" />
+                                </div>
+                                <div class="galeria_column">
+                                    <img src="imagens/galeria/salao1.jpg" />
+                                    <img src="imagens/galeria/salao6.jpg" />
+                                    
+                                    <img src="imagens/galeria/salao7.jpg" style="display: none;" />
+                                    <img src="imagens/galeria/salao8.jpg" style="display: none;" />
+                                </div>
+                                <div class="galeria_column">
+                                    <img src="imagens/galeria/salao5.jpg" />
+                                    <img src="imagens/galeria/salao9.jpg" />
+                                </div>
+                                <div class="galeria_column">
+                                    <img src="imagens/galeria/salao7.jpg" />
+                                    <img src="imagens/galeria/salao8.jpg" />
+                                </div>
+                            </div>
+                        </section>
+                        <section id="sobre">
+                            <div class="text1">
+                                <h1>Como começou:</h1>
+                                <p>Desde cedo sempre gostei de pizzas e essa paixão foi crescendo com os anos. O que era apenas uma paixão se tornou uma fonte de renda, não tem nada mais gratificante do que trabalhar com algo que sempre amei comer e fazer.</p>
+                            </div>
+                            <div class="text2">
+                                <h1>Nossos valores:</h1>
+                                <p>Nós da Pizzaria prezamos muito por um excelente atendimento, nossa missão é ver o cliente sainda feliz pela porta.</p>
+                                <p>Nos dedicamos ao máximo para manter um lugar limpo, agradável, acessível e amigavel para todo o público.</p>
+                            </div>
+                        </section>
+                        <section id="contato">
+                            <div class="social">
+                                <div class="p_wt">
+                                    <p>Peça pelo whatsapp:<a href="https://api.whatsapp.com/send?phone=5561993968144&text=Olá,%20gostaria%20de%20fazer%20um%20pedido!"><i class="fab fa-whatsapp-square"></i></a></p>
+                                </div>
+                                <a href="https://www.facebook.com/allyson.athyrson/"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/allysonathyrson/?hl=pt-br"><i class="fab fa-instagram-square"></i></a>
+                            </div>
+                            <div class="endereco">
+                                <address>
+                                    Varjão
+                                    Lago Norte
+                                    Brasília - DF
+                                    70297-400
+                                </address>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15363.131516595276!2d-47.886773222324905!3d-15.709670918581628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3905bf048595%3A0x379e02372655f4ab!2sVarj%C3%A3o%20-%20Lago%20Norte%2C%20Bras%C3%ADlia%20-%20DF%2C%2070297-400!5e0!3m2!1spt-BR!2sbr!4v1595792091873!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        
+        $('#carregamento').css('display', 'none');
+        $('#carregado').css('display', 'block');
+
+        //$('#carregado').fadeOut('fast')
+        
+        var carregamento;
+        var contagem = 0;
+        var altura_icone = 10;
+        
+        carregamento = setInterval(function(){
+            if(contagem <= 100){
+                $('#porcentagem').html(contagem+'%');
+                $('#sombra_icone_pizza').css('height', altura_icone+'em');
+            }
+            if(contagem >= 110){
+                clearInterval(carregamento);
+
+                //$('#carregamento').css('display', 'none');
+                //$('#carregado').fadeIn(1000);
+            }
+
+            if(contagem == 15 || contagem == 45 || contagem == 70){
+                contagem += 25;
+            }
+            if(altura_icone != 0){
+                altura_icone -= 0.2;
+            }
+
+            contagem += 1;
+        }, 70);
+        
+        
+        // animação do icone do menu
+        function animacaoMenu(elemento){
+            // efeito icone menu
+            elemento.classList.toggle('change');
+
+            // efeito da logo
+            document.getElementById('logo').classList.toggle('change_logo');
+
+            // efeito mostra/oculta lista
+            $('#navbar').toggle(1000);
+        }
+        $(window).resize(function(event){ // corrige erro do $().toggle() // verificar funcionamento
+            if(event['currentTarget'].innerWidth > 768 && $('#navbar').css('display') == 'block'){
+                $('#navbar').show();
+            }
+        });
+        
+    
+        //EFEITO DO SLIDE DO CARDÁPIO//
+        $('ul#normal, ul#especial, ul#suprema, ul#cosmica').removeClass('slideshow_atual');
+        $('ul#normal').addClass('slideshow_atual');
+        
+        var slideIndex = 0;
+        showSlides(slideIndex);
+
+        function maisSlides(n){
+            showSlides(slideIndex += n);
+        }
+        function showSlides(n){
+            var slides = $('.slideshow_atual .meusSlides');
+
+            if(n == slides.length-3){
+                slideIndex = 0;
+            }
+            if(n < 0){
+                slideIndex = slides.length-4;
+            }
+
+            for(i=0; i<slides.length; i++){
+                slides[i].style.display = 'none';
+            }
+
+            slides[slideIndex].style.display = 'block';
+            slides[slideIndex+1].style.display = 'block';
+            slides[slideIndex+2].style.display = 'block';
+            slides[slideIndex+3].style.display = 'block';
+        }
+        //EFEITO DO SLIDE DO CARDÁPIO\\
+    </script>
+</html>
