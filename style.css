@@ -526,40 +526,45 @@ nav ul li a:hover, nav ul li a:active{
     color: #E4D9C0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#contato .social > a{
+    color: green;
+}
 #contato .p_wt{
-    width: 100%;
+    width: 70%;
 
-    font-size: 2em;
-}
-#contato .p_wt p{
-    width: 100%;
-
-    display: inline-block;
-
-    text-align: center;
-}
-#contato a{
-    color: #E4D9C0;
-}
-#contato .p_wt a{
     margin-left: 0.3em;
 
-    display: inline;
+    display: block;
 
     font-size: 2em;
-    vertical-align: middle;
     text-align: center;
+    text-decoration: none;
+    border: 1px solid green;
+    border-radius: 30px;
+}
+#contato .p_wt:hover, #contato .p_wt:active{
+    border: 1px solid green;
+    color: #ffffff;
+    background-color: green;
 }
 #contato .social{
     display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
 }
-#contato .social > a{
+#contato .social div{
+    margin: 2em;
 
-    display: inline-block;
-    
-    font-size: 4em;
+    font-size: 1.5em;
+}
+#contato .social div a{
+    color: #E4D9C0;
+}
+#contato .social div a:hover{
+    color: #A3283A;
+}
+#contato .social div i{
+    font-size: 2em;
 }
 #contato .endereco{
     background-color: #A3283A;
@@ -724,6 +729,17 @@ nav ul li a:hover, nav ul li a:active{
     #contato iframe{
         width: 90vw;
     }
+    #contato .social .p_wt{
+        width: 100%;
+
+        margin: 3%;
+
+        font-size: 1.5em;
+        padding: 6px;
+    }
+    #contato .social div{
+        margin: 2em 0;
+    }
     /* --------------------------CONTEUDO F--------------------------------- */
 }
 @media only screen and (max-width: 425px){
@@ -774,6 +790,7 @@ nav ul li a:hover, nav ul li a:active{
     }
     #contato iframe{
         width: 100vw;
+        height: 300px;
     }
 }
 @media only screen and (max-width: 320px){
